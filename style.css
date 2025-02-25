@@ -1,0 +1,291 @@
+/* Grundläggande stilar */
+body {
+    font-family: 'Lato', sans-serif; /* Modernt och rent typsnitt */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f5e8f7; /* Ljust lila (dov pastell) */
+    color: #333; /* Mörk text för läsbarhet */
+}
+
+/* Navigationsmeny */
+nav {
+    background-color: #a6e3d7; /* Mintgrön (dov pastell) */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Lätt skugga för djup */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    transition: background-color 0.3s, color 0.3s; /* Smidig övergång för hover */
+}
+
+nav ul li a:hover {
+    background-color: #95d7c9; /* Ljusare mintgrön vid hover */
+    color: #fff; /* Vit text vid hover */
+}
+
+/* Sektioner */
+section {
+    padding: 80px 20px 60px;
+    text-align: center;
+    margin-top: 50px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    background-color: #fff; /* Vitt för sektioner */
+    border-radius: 10px; /* Rundade hörn för modern känsla */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Skarpare, modernare skugga */
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#om, #hem {
+    background-color: #f8e8f0; /* Blekrosa (dov pastell) */
+}
+
+h1, h2 {
+    color: #8a4d8b; /* Dov lila för rubriker */
+    font-weight: 600;
+}
+
+/* Projekt-container */
+.projekt-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.projekt {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    margin: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 12px; /* Rundare hörn för modern känsla */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.projekt:hover {
+    transform: translateY(-8px); /* Mer uttalad lyft vid hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Projektmedia (bilder och videor) */
+.projekt-media {
+    margin-bottom: 20px;
+}
+
+/* Bildkarusell */
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-image {
+    display: none;
+    width: 100%;
+    border-radius: 12px 12px 0 0; /* Rundade hörn uppe */
+    object-fit: cover;
+}
+
+.carousel-image.active {
+    display: block;
+}
+
+.carousel-prev, .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(138, 77, 139, 0.7); /* Transparant dov lila */
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.carousel-prev:hover, .carousel-next:hover {
+    background-color: #6d3a6e; /* Mörkare dov lila vid hover */
+}
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
+}
+
+/* Videocontainer för flera videor */
+.video-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Projektvideor */
+.projekt-video {
+    width: 100%;
+    height: 169px; /* 16:9-förhållande med 300px bredd */
+    border: none;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+/* Projektlänkar */
+.projekt a {
+    color: #5f9ea0; /* Ljusblå (dov pastell) */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.projekt a:hover {
+    color: #468c8e; /* Mörkare ljusblå vid hover */
+    text-decoration: underline;
+}
+
+/* Profilbild */
+.profilbild {
+    max-width: 200px;
+    border-radius: 50%;
+    margin: 20px auto;
+    display: block;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Om mig-text */
+.om-text {
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: left;
+    padding: 0 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.om-text h3 {
+    color: #8a4d8b; /* Dov lila för underrubriker */
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.om-text p {
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: #444; /* Mörkare text för bättre läsbarhet */
+}
+
+.om-text ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.om-text li {
+    margin-bottom: 10px;
+    color: #444;
+}
+
+/* Footer */
+footer {
+    background-color: #a6e3d7; /* Mintgrön (dov pastell) */
+    color: #333;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 0 0 10px 10px;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    color: #5f9ea0; /* Ljusblå för länkar i footer */
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.social-links a:hover {
+    color: #468c8e; /* Mörkare ljusblå vid hover */
+    text-decoration: underline;
+}
+
+/* Responsiv design */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 0;
+    }
+
+    .projekt {
+        width: 100%;
+    }
+
+    .profilbild {
+        max-width: 150px;
+    }
+
+    .om-text {
+        padding: 0 10px;
+        max-width: 100%;
+    }
+
+    #om, #hem {
+        padding: 60px 20px;
+    }
+
+    .social-links a {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .video-container {
+        flex-direction: column;
+    }
+
+    .projekt-video {
+        width: 100%;
+        height: auto;
+    }
+
+    section {
+        border-radius: 0; /* Ta bort rundade hörn på mobila enheter för bättre anpassning */
+    }
+
+    .projekt {
+        border-radius: 8px; /* Mindre rundade hörn på mobila enheter */
+    }
+}
