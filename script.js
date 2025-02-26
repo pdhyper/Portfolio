@@ -1,4 +1,4 @@
-// Smooth scrolling när man klickar på en meny-länk
+// Smidig rullning när man klickar på en meny-länk
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -36,6 +36,12 @@ document.querySelectorAll('.carousel').forEach(carousel => {
         currentIndex = (currentIndex - 1 + images.length) % images.length;
         showImage(currentIndex);
     });
+
+    nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % images.length;
+        showImage(currentIndex);
+    });
+});
 
     nextBtn.addEventListener('click', () => {
         currentIndex = (currentIndex + 1) % images.length;
