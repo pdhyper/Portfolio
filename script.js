@@ -1,3 +1,4 @@
+// Smooth scrolling när man klickar på en meny-länk
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -7,6 +8,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// Lägg till 'visible' klass när sektioner blir synliga vid scroll
 document.addEventListener('scroll', function() {
     const sections = document.querySelectorAll('section');
     sections.forEach(section => {
@@ -18,6 +20,7 @@ document.addEventListener('scroll', function() {
     });
 });
 
+// Bildkarusell för projektsektionen
 document.querySelectorAll('.carousel').forEach(carousel => {
     const images = carousel.querySelectorAll('.carousel-image');
     const prevBtn = carousel.querySelector('.carousel-prev');
